@@ -1,0 +1,12 @@
+# system files
+.DS_Store
+Thumbs.db
+
+# vscode
+.vscode
+
+# r
+/renv
+
+# web dev
+/node_modules
