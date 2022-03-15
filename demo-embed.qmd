@@ -1,0 +1,20 @@
+---
+title: "Test headline"
+subtitle: "And some additional comment here"
+page-layout: custom
+theme: none
+css: style/embed.css
+execute:
+  echo: false
+---
+
+```{ojs}
+//| column: screen
+
+// literally just importing the stuff from article.qmd
+// (don't forget to use `viewof` for the controls!)
+import { viewof countrySelect, pollutionChart } from "./demo-analysis.qmd"
+
+viewof countrySelect;
+pollutionChart;
+```

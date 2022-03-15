@@ -10,3 +10,6 @@ Thumbs.db
 
 # web dev
 /node_modules
+
+# quarto
+/.quarto/

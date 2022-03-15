@@ -2,7 +2,7 @@
 
 What's this report all about? What kind of charts or analysis have we done?
 
-## Use + Remix
+## Use + Remix rights
 
 ![[Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0)](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png)
 
@@ -16,13 +16,23 @@ Data in these charts comes from:
 
 **Please attribute 360info and the data sources when you use and remix these visualisations.**
 
-### Reproduce the analysis
+## Reproduce the analysis
 
-<!-- These instructions are for analysis and charts done in R. If you've used something else, replace this section. -->
+Our graphics are built with Quarto [R](https://quarto.org) and can be found in the`*.qmd` files. Quarto allows reproducible analysis and visualisation to be done in [R](https://r-project,.org), [Python](https://python.org) or [Observable JS](https://observablehq.com/@observablehq/observables-not-javascript).
 
-Our analyses are done in [R](http://r-project.org) and can be found in the `*.r` and `*.rmd` files.
+You'll need to:
+- [Download and install Quarto](https://quarto.org/docs/get-started)
+- [Download the install R](https://www.r-project.org)
+- Satisfy the R package dependencies. In R:
+  * Install the [`renv`](https://rstudio.github.io/renv) package with `install.packages("renv")`,
+  * Then run `renv::restore()` to install the R package dependencies.
+  * (For problems satisfying R package dependencies, refer to [Quarto's documentation on virtual environments](https://quarto.org/docs/projects/virtual-environments.html).)
 
-The `renv.lock` file can be used with the [`renv`](https://rstudio.github.io/renv) or [`capsule`](https://github.com/MilesMcBain/capsule) packages to recreate the R package dependencies.
+Now, render the `.qmd` files to the `/docs` directory with:
+
+```sh
+quarto render --output-dir docs *.qmd
+```
 
 ## Help
 
