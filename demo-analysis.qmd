@@ -14,7 +14,9 @@ This demo analyses some data on emissions of various pollutants from Our World i
 This analysis is _really quick_: we download the OWID data, selecting a
 few columns and giving them tidier names, and we pass it immediately onto Observable JS.
 
-```{r import}
+```{r}
+#| label: import
+
 library(readr)
 
 pollution <-
@@ -33,7 +35,8 @@ pollution
 Here's what the data looks like. To pass it on to Observable JS, we call `ojs_define`. We also pass a list of the countries in the data on separately so
 that we can use it for a dropdown menu.
 
-```{r inspect}
+```{r}
+#| label: inspect
 ojs_define(pollution = pollution)
 ojs_define(country_list = unique(pollution$country))
 ```
@@ -46,7 +49,8 @@ Now, let's chart the data using
 [Observable Plot](https://observablehq.com/@observablehq/plot)! And to make things a little trickier, let's throw a dropdown menu for the country in,
 courtesy of [Observable Inputs](https://observablehq.com/@observablehq/inputs). 
 
-```{ojs pollutionplot}
+```{ojs}
+//| label: pollutionplot
 
 // here's our dropdown menu, using the country list from R
 viewof countrySelect = Inputs.select(country_list, {label: "Pick a country:"});
@@ -84,7 +88,9 @@ That said, we can write any kind of JavaScript in an OJS cell, or even import an
 
 For example, [here's one from d3](https://observablehq.com/@d3/bar-chart-transitions), who are also the makers of Observable Plot:
 
-```{ojs d3barchart}
+```{ojs}
+//| label: d3barchart
+
 import {BarChart} from "@d3/bar-chart-transitions"
 
 d3barchart = BarChart(filteredPollution, {
