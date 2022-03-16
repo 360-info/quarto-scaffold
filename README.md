@@ -18,7 +18,7 @@ Data in these charts comes from:
 
 ## Reproduce the analysis
 
-Our graphics are built with Quarto [R](https://quarto.org) and can be found in the`*.qmd` files. Quarto allows reproducible analysis and visualisation to be done in [R](https://r-project,.org), [Python](https://python.org) or [Observable JS](https://observablehq.com/@observablehq/observables-not-javascript).
+We typically publish graphics using [Quarto](https://quarto.org) notebooks, which can be found in the`*.qmd` files. Quarto allows reproducible analysis and visualisation to be done in a mix of languages, but we typically use [R](https://r-project,.org) and [Observable JS](https://observablehq.com/@observablehq/observables-not-javascript).
 
 You'll need to:
 - [Download and install Quarto](https://quarto.org/docs/get-started)
