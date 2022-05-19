@@ -3,7 +3,13 @@ title: "Test headline"
 subtitle: "And some additional comment here"
 page-layout: custom
 theme: none
-css: style/embed.css
+# this includes some default css for the titling, the bootstrap icons (since
+# they only come with the bootstrap themes usually), and some extra css for the
+# modals 
+css:
+  - style/embed.css
+  - https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css
+  - style/modal.css
 execute:
   echo: false
 ---
@@ -18,3 +24,94 @@ import { viewof countrySelect, pollutionChart } from "./demo-analysis.qmd"
 viewof countrySelect;
 pollutionChart;
 ```
+
+<!-- share/notes popups -->
+
+```{ojs}
+//| include: false
+
+micro = require("micromodal@0.4.10")
+micro.init({
+  awaitOpenAnimation: true,
+  awaitCloseAnimation: true
+});
+```
+
+<!-- dialog buttons -->
+
+::: {.modalpanel}
+<a href="#" data-micromodal-trigger="modalnotes" tabindex="0">
+  <i class="bi bi-clipboard-data"></i>
+  Notes
+</a>
+
+<a href="#" data-micromodal-trigger="modaluseremix" tabindex="0">
+  <i class="bi bi-share-fill"></i>
+  Share
+</a>
+
+Chart: James Goldie, 360info. Data: UIS/OWID
+:::
+
+::::::: {#modaluseremix .modal .micromodal-slide aria-hidden="true"}
+:::::: {.modal__overlay tabindex="-1" data-micromodal-close="true"}
+::::: {.modal__container role="dialog" aria-modal="true" aria-labelledby="modaluseremix-title"}
+
+<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+
+:::: {#modaluseremix-content}
+## Use + Remix
+
+These charts, as well as the analyses that underpin them, are available under a [**Creative Commons Attribution 4.0 licence**](https://creativecommons.org/licenses/by/4.0).
+
+Please acknowledge [360info](https://360info.org) and our data sources when you use these charts and data.
+
+#### Embed this chart in your article
+
+Copy and paste the following code:
+
+::: {.embedcode}
+```
+<iframe src="https://360info-studentflows.pages.dev/
+embed-netflow-scatter" title="Chart with Human Development
+Index increasing to the right and Net Student Ratio
+increasing upward. Countries situated above the line, in
+blue, are receiving more students from other countries than
+they send out." width="550" height="560" scrolling="no"
+style="border:none;"></iframe>
+```
+:::
+
+This content is subject to [360info's Terms of Use](https://newshub.360info.org/page/terms).
+
+#### Get the data and code
+
+Visit the [GitHub repository](https://github.com/360-info/report-template/tree/main/data) to:
+
+* [**Download the data**](https://github.com/360-info/report-template/tree/main/data)
+* [**Recreate or remix the chart**](https://github.com/360-info/report-template)
+::::
+
+:::::
+::::::
+:::::::
+
+<!-- notes dialog -->
+
+::::::: {#modalnotes .modal .micromodal-slide aria-hidden="true"}
+:::::: {.modal__overlay tabindex="-1" data-micromodal-close="true"}
+::::: {.modal__container role="dialog" aria-modal="true" aria-labelledby="modalnotes-title"}
+
+<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+
+<header>
+## Notes {#modalnotes-title}
+</header>
+
+:::: {#modal-1-content}
+This is a great place to add some more notes on the data!
+::::
+
+:::::
+::::::
+:::::::

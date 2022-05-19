@@ -7,7 +7,7 @@ code-fold: true
 theme: style/article.scss
 ---
 
-This demo analyses some data on emissions of various pollutants from Our World in Data in R, then creates a chart in Observable JS. The [pollution-embed.qmd]() file is anb embeddable version of that chart.
+This demo analyses some data on emissions of various pollutants from Our World in Data in R, then creates a chart in Observable JS. The [demo-embed.qmd](demo-embed.qmd) file is anb embeddable version of that chart.
 
 ## The analysis
 
