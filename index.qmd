@@ -7,7 +7,7 @@ code-fold: true
 theme: style/article.scss
 ---
 
-This demo analyses some data on emissions of various pollutants from Our World in Data in R, then creates a chart in Observable JS. The [demo-embed.qmd](demo-embed.qmd) file is anb embeddable version of that chart.
+This demo analyses some data on emissions of various pollutants from Our World in Data in R, then creates a chart in Observable JS. The [demo-embed-chart.qmd](demo-embed-chart.qmd) file is an embeddable version of that chart. There's also a very basic example map embed at [demo-embed-map.qmd](demo-embed-map.qmd).
 
 ## The analysis
 
@@ -78,7 +78,7 @@ pollutionChart = Plot.plot({
 });
 ```
 
-Nice! Now check out [`demo-embed.qmd`](demo-embed.html) for the embeddable version!
+Nice! Now check out [`demo-embed-chart.qmd`](demo-embed-chart.html) for the embeddable version!
 
 The above example shows that we can have 'reactive' plots at the language level: I can connect a dropdown or other input to the plot and have it respond very easily.
 
