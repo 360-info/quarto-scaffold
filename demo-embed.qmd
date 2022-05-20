@@ -14,18 +14,39 @@ execute:
   echo: false
 ---
 
+::: {.modalpanel}
+<!-- check https://icons.getbootstrap.com for icons! -->
+<a href="#" data-micromodal-trigger="modal-useremix" tabindex="0">
+  <i class="bi bi-share-fill"></i>
+  Share
+</a>
+
+<a href="#" data-micromodal-trigger="modal-about" tabindex="0">
+  <i class="bi bi-clipboard-data"></i>
+  About
+</a>
+
+<!-- if there's room here, put credits on two lines:
+  * Editor names, 360info (hint: put &shy; in the middle of long names!)
+  * Data: ORG
+  (if there isn't room, put it in the ABOUT dialog) -->
+Editor Name, 360info
+
+Data: ORG
+:::
+
 ```{ojs}
 //| column: screen
 
 // literally just importing the stuff from article.qmd
 // (don't forget to use `viewof` for the controls!)
-import { viewof countrySelect, pollutionChart } from "./demo-analysis.qmd"
+import { viewof countrySelect, pollutionChart } from "./index.qmd"
 
 viewof countrySelect;
 pollutionChart;
 ```
 
-<!-- share/notes popups -->
+<!-- share/about popups -->
 
 ```{ojs}
 //| include: false
@@ -39,27 +60,13 @@ micro.init({
 
 <!-- dialog buttons -->
 
-::: {.modalpanel}
-<a href="#" data-micromodal-trigger="modalnotes" tabindex="0">
-  <i class="bi bi-clipboard-data"></i>
-  Notes
-</a>
-
-<a href="#" data-micromodal-trigger="modaluseremix" tabindex="0">
-  <i class="bi bi-share-fill"></i>
-  Share
-</a>
-
-Chart: James Goldie, 360info. Data: UIS/OWID
-:::
-
-::::::: {#modaluseremix .modal .micromodal-slide aria-hidden="true"}
+::::::: {#modal-useremix .modal .micromodal-slide aria-hidden="true"}
 :::::: {.modal__overlay tabindex="-1" data-micromodal-close="true"}
-::::: {.modal__container role="dialog" aria-modal="true" aria-labelledby="modaluseremix-title"}
+::::: {.modal__container role="dialog" aria-modal="true" aria-labelledby="modal-useremix-title"}
 
 <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
 
-:::: {#modaluseremix-content}
+:::: {#modal-useremix-content}
 ## Use + Remix
 
 These charts, as well as the analyses that underpin them, are available under a [**Creative Commons Attribution 4.0 licence**](https://creativecommons.org/licenses/by/4.0).
@@ -72,12 +79,14 @@ Copy and paste the following code:
 
 ::: {.embedcode}
 ```
-<iframe src="https://360info-studentflows.pages.dev/
-embed-netflow-scatter" title="Chart with Human Development
-Index increasing to the right and Net Student Ratio
-increasing upward. Countries situated above the line, in
-blue, are receiving more students from other countries than
-they send out." width="550" height="560" scrolling="no"
+<iframe
+src="https://360info-studentflows.pages.dev/
+embed-netflow-scatter" title="Chart with Human
+Development Index increasing to the right and Net
+Student Ratio increasing upward. Countries situated
+above the line, in blue, are receiving more
+students from other countries than they send out."
+width="550" height="560" scrolling="no"
 style="border:none;"></iframe>
 ```
 :::
@@ -98,17 +107,17 @@ Visit the [GitHub repository](https://github.com/360-info/report-template/tree/m
 
 <!-- notes dialog -->
 
-::::::: {#modalnotes .modal .micromodal-slide aria-hidden="true"}
+::::::: {#modal-about .modal .micromodal-slide aria-hidden="true"}
 :::::: {.modal__overlay tabindex="-1" data-micromodal-close="true"}
-::::: {.modal__container role="dialog" aria-modal="true" aria-labelledby="modalnotes-title"}
+::::: {.modal__container role="dialog" aria-modal="true" aria-labelledby="modal-about-title"}
 
 <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
 
 <header>
-## Notes {#modalnotes-title}
+## About {#modal-about-title}
 </header>
 
-:::: {#modal-1-content}
+:::: {#modal-about-content}
 This is a great place to add some more notes on the data!
 ::::
 
