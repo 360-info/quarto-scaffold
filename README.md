@@ -28,10 +28,10 @@ You'll need to:
   * Then run `renv::restore()` to install the R package dependencies.
   * (For problems satisfying R package dependencies, refer to [Quarto's documentation on virtual environments](https://quarto.org/docs/projects/virtual-environments.html).)
 
-Now, render the `.qmd` files to the `/docs` directory with:
+Now, render the `.qmd` files to the `/out` directory with:
 
 ```sh
-quarto render --output-dir docs *.qmd
+quarto render
 ```
 
 ## Help
