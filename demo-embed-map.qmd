@@ -36,9 +36,6 @@ Editor Name, 360info
 Data: ORG
 :::
 
-::: {#map style="width: 100%; height: 80vh"}
-:::
-
 ```{ojs}
 // load maplibre-gl. it's a bit finnicky...
 maplibregl = require('maplibre-gl@2.1.9/dist/maplibre-gl.js').catch(() => window["maplibregl"]);
@@ -47,12 +44,32 @@ maplibregl = require('maplibre-gl@2.1.9/dist/maplibre-gl.js').catch(() => window
 ```{ojs}
 //| column: screen
 
-map = new maplibregl.Map({
-  container: "map",
-  style: "https://demotiles.maplibre.org/style.json",
-  center: [-74.5, 40],
-  zoom: 3
+/* this is a bit different to regular mapbox/maplibre instantiation
+   it lets have the map react to other values in the document, like
+   a button or a timer, without reinstantiating!
+   (based on https://observablehq.com/@tmcw/using-mapbox-gl-js) */
+   
+viewof map = {
+  let container = html`<div style='height:400px;' />`;
+
+  // Give the container dimensions.
+  yield container;
+
+  // Create the \`map\` object with the mapboxgl.Map constructor, referencing
+  // the container div
+  let map = new maplibregl.Map({
+    container,
+    center: [-74.5, 40],
+    zoom: 6,
+    style: "https://demotiles.maplibre.org/style.json"
   });
+
+  // wait until the map loads
+  map.on("load", () => {
+    container.value = map;
+    container.dispatchEvent(new CustomEvent("input"));
+  });
+}
 ```
 
 <!-- share/about popups -->
