@@ -1,0 +1,20 @@
+::: {.modalpanel}
+<!-- check https://icons.getbootstrap.com for icons! -->
+<a href="#" data-micromodal-trigger="modal-useremix" tabindex="0">
+  <i class="bi bi-share-fill"></i>
+  Share
+</a>
+
+<a href="#" data-micromodal-trigger="modal-about" tabindex="0">
+  <i class="bi bi-clipboard-data"></i>
+  About
+</a>
+
+<!-- if there's room here, put credits on two lines:
+  * Editor names, 360info (hint: put &shy; in the middle of long names!)
+  * Data: ORG
+  (if there isn't room, put it in the ABOUT dialog) -->
+Editor Name, 360info
+
+Data: ORG
+:::
