@@ -1,6 +1,6 @@
-# 360info report template
+# [report title]
 
-What's this report all about? What kind of charts or analysis have we done?
+[report summary]
 
 ## Use + Remix rights
 
@@ -12,7 +12,7 @@ These charts, as well as the analyses that underpin them, are available under a 
 
 Data in these charts comes from:
 
-* Data sources here (with links!)
+* [report data sources and links]
 
 **Please attribute 360info and the data sources when you use and remix these visualisations.**
 
@@ -36,6 +36,4 @@ quarto render
 
 ## Help
 
-<!-- replace `report-template` with the name of this repo in the link below  -->
-
-If you find any problems with our analysis or charts, please feel free to [create an issue](https://github.com/360-info/report-template/issues/new)!
+If you find any problems with our analysis or charts, please feel free to [create an issue](https://github.com/360-info/[report repo name]/issues/new)!
