@@ -1,6 +1,6 @@
-# [report title]
+# [report_title]
 
-[report summary]
+[report_summary]
 
 ## Use + Remix rights
 
@@ -12,13 +12,33 @@ These charts, as well as the analyses that underpin them, are available under a 
 
 Data in these charts comes from:
 
-* [report data sources and links]
+* [report_datasources_links]
 
 **Please attribute 360info and the data sources when you use and remix these visualisations.**
 
 ## Reproduce the analysis
 
-We typically publish graphics using [Quarto](https://quarto.org) notebooks, which can be found in the`*.qmd` files. Quarto allows reproducible analysis and visualisation to be done in a mix of languages, but we typically use [R](https://r-project,.org) and [Observable JS](https://observablehq.com/@observablehq/observables-not-javascript).
+### 💨 Quickstart: use the dev container
+
+This project comes with a ready-to-use [dev container](https://code.visualstudio.com/docs/remote/containers) that includes everything you need to reproduce the analysis (or do a similar one of your own!), including [R](https://r-project.org) and [Quarto](https://quarto.org).
+
+1. [Launch this project in GitHub Codespaces](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=[report_codespaces_id])
+2. If you have Docker installed, you can build and run the container locally:
+  - Download or clone the project
+  - Open it in [Visual Studio Code](https://code.visualstudio.com)
+  - Run the **Remote-Containers: Reopen in Container** command
+
+Once the container has launched (it might take a few minutes to set up the first time), you can run the analysis scripts with:
+
+```sh
+quarto render
+```
+
+Or look for the `.qmd` files to modify the analysis.
+
+### Manual setup
+
+To setup a development environment manually, 
 
 You'll need to:
 - [Download and install Quarto](https://quarto.org/docs/get-started)

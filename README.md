@@ -22,11 +22,14 @@ quarto use extension 360-info/quarto-examples/360analysis
 ## ✅ Publication checklist
 
 - [ ] Replace this README with [`README-template.md`](README-template.md), adding:
-  * `[report title]`
-  * `[report summary]`
-  * `[report data sources and links]`
+  * `[report_title]`
+  * `[report_summary]`
+  * `[report_datasources_links]`
+  * `[report_codespaces_id]`
+    - (lookup the repo ID in the address bar once you select it [in the Codespaces launcher](https://github.com/codespaces/new))
   * Any exceptions to [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) licensing
-  * `[report repo name]`
+  * `[report_reponame]`
   * Any changes that need to be made to reproduction instructions
 - [ ] Fill in [`data/README.md`](data/README.md) with the data dictionary, links or other notes needed to understand and re-use the dataset
+- [ ] Change the 
 - [ ] Make sure any additional R packages used in the analysis are installed at the bottom of [`.devcontainer/Dockerfile`](.devcontainer/Dockerfile)
