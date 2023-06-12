@@ -1,8 +1,11 @@
 # [report_title]
+### [📋&nbsp;Add&nbsp;graphic&nbsp;to&nbsp;your&nbsp;story]([report_share_url]) • [📊&nbsp;Get&nbsp;the&nbsp;data](data) • [💻&nbsp;Reproduce&nbsp;the&nbsp;analysis](#-reproduce-the-analysis)
 
 [report_summary]
 
-## Use + Remix rights
+[report_graphic_and_link]
+
+## ♻️ Use + Remix rights
 
 ![[Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0)](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png)
 
@@ -16,9 +19,9 @@ Data in these charts comes from:
 
 **Please attribute 360info and the data sources when you use and remix these visualisations.**
 
-## Reproduce the analysis
+## 💻 Reproduce the analysis
 
-### 💨 Quickstart: use the dev container
+### Quickstart: use the dev container
 
 This project comes with a ready-to-use [dev container](https://code.visualstudio.com/docs/remote/containers) that includes everything you need to reproduce the analysis (or do a similar one of your own!), including [R](https://r-project.org) and [Quarto](https://quarto.org).
 
@@ -54,6 +57,6 @@ Now, render the `.qmd` files to the `/out` directory with:
 quarto render
 ```
 
-## Help
+## ❓ Help
 
 If you find any problems with our analysis or charts, please feel free to [create an issue](https://github.com/360-info/[report repo name]/issues/new)!
