@@ -23,16 +23,16 @@
 		/* add apt packages (eg. system requirements for r packages) here.
 		   note that they are not frozen */
 		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-			"packages": "libudunits2-dev,libxtst6,libxt6,libmagick++-dev"
+			"packages": "libudunits2-dev,libxtst6,libxt6,libmagick++-dev,librsvg2-dev"
 		},
 		/* add additional r packages here */
 		"ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
-			"packages": "github::rstudio/renv,tidyverse,here,httpgd,themes360info"
-		},
-	},
+			"packages": "github::rstudio/renv,tidyverse,here,httpgd,janitor,github::360-info/themes360info"
+		}
+	}
 
-	/* Use 'postCreateCommand' to run commands after the container is created.
-	  (for example, install some R packages or system dependencies) */
+	/* Use 'postCreateCommand' to run commands after the container is created
+	  (for example, copy some extra fonts to /usr/local/share/fonts) */
 	// "postCreateCommand": "",
 
 	/* Use 'forwardPorts' to make a list of ports inside the container available
