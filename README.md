@@ -6,10 +6,15 @@ Base a new repo off this public template to get started with a reproducible anal
 
 To start working with a preconfigured, reproducible environment:
 
+- Make sure you have [VSCode](https://code.visualstudio.com) and [Docker](https://www.docker.com/) installed
 - Clone this repository
-- Open it in [VSCode](https://code.visualstudio.com)
+- Open it in VSCode
 - Open the command palette (Cmd/Ctrl+Shift+P) and run **"Remote-Containers: Reopen in Container"**
-- The project will now be open in a container that includes Quarto, R and the packages needed to reproduce the analysis
+- The project will now be open in a container that includes [Quarto](https://quarto.org), [R](https://r-project.org) and the packages needed to reproduce the analysis
+- To customise the container, edit the `.devcontainer/devcontainer.json` file. You can:
+  - Add or change the R packages installed using the `r-packages` feature;
+  - Add external dependencies from APT using the `apt-packages` feature; or
+  - Add major external dependencies or features, like Node, by adding other dev container features (although for the widest compatibility, you should check to ensure they run on both x64 and ARM64).
 
 ## ➕ Adding stories
 
