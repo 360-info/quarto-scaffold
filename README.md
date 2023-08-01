@@ -13,10 +13,10 @@ To start working with a preconfigured, reproducible environment:
 
 ## ➕ Adding stories
 
-This repo just keeps the dev environment scaffolding; templates for individual analyses and graphics are kept in the [`quarto-examples`] repo. To bring one of them into your project with [Quarto](https://quarto.org), run (for example):
+This repo just keeps the dev environment scaffolding; templates for individual analyses and graphics are kept in the [`quarto-templates`](https://github.com/360-info/quarto-templates) repo. To bring one of them into your project with [Quarto](https://quarto.org), run (for example):
 
 ```shell
-quarto use extension 360-info/quarto-examples/360analysis
+quarto use extension 360-info/quarto-templates/360analysis
 ```
 
 ## ✅ Publication checklist
@@ -36,7 +36,3 @@ quarto use extension 360-info/quarto-examples/360analysis
 ### Codespaces ID
 
 Lookup the repo ID in the address bar once you select it [in the Codespaces launcher](https://github.com/codespaces/new)).
-
-
- 
-
