@@ -16,7 +16,7 @@ To start working with a preconfigured, reproducible environment:
 This repo just keeps the dev environment scaffolding; templates for individual analyses and graphics are kept in the [`quarto-templates`](https://github.com/360-info/quarto-templates) repo. To bring one of them into your project with [Quarto](https://quarto.org), run (for example):
 
 ```shell
-quarto use extension 360-info/quarto-templates/360analysis
+quarto use extension 360-info/quarto-templates/360-embed
 ```
 
 ## ✅ Publication checklist
