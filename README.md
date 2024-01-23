@@ -8,7 +8,7 @@ This template is designed to be used as a [dev container](https://containers.dev
 
 Add dependencies, such as R package or other tools, using the `.devcontainer/devcontainer.json` file.
 
-The project's `README.md` will be generated from `README.qmd`, not this file. Fill the frontmatter in there to customise the README.
+The project's `README.md` will be generated from `README.qmd`, not this file. Fill the frontmatter in there to customise the README. When the project is ready for publication, overwrite this file with the rendered `out/README.md`.
 
 ## Adding analyses or embeds
 
