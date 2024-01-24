@@ -1,14 +1,14 @@
 ---
 format: gfm
 360readme:
-  title: Antarctic sea ice map
-  summary: Visualises the complex layers of ice that make up Antarctica.
-  repo: report-antarctic-ice
-  share-url: https://antarcticamap.360visuals.org/antarctic-map
+  title: Title here
+  summary: One line summary here
+  repo: report-example
+  share-url: https://example.360visuals.org/example
   data-sources: |
     <ul>
-      <li><a href="https://tc.copernicus.org/articles/7/375/2013/tc-7-375-2013.html">Bedmap2</a> project (<a href="https://doi.org/10.5194/tc-7-375-2013">Fretwell et al. 2013</a>)</li>
-      <li><a href="https://nsidc.org">National Sea and Ice Data Center</a></li>
+      <li><a href="https://example.com">Example 1</a></li>
+      <li><a href="https://example.com">Example 2</a></li>
     </ul>
 ---
 # {{< meta 360readme.title >}}
