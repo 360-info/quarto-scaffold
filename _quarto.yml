@@ -1,6 +1,12 @@
 project:
   type: website
   output-dir: out
+  render:
+    - "README.qmd"
+    - "analysis/*/*.qmd"
+    - "analysis/*.qmd"
+    - "*/*.qmd"
+  post-render: cp -f out/README.md README.md
   
 # only re-render if the source changes or if we specifically render that file
 execute:
