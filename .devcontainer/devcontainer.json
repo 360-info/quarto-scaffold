@@ -29,7 +29,7 @@
 		"ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
 			"packages": "github::rstudio/renv,tidyverse,here,httpgd,janitor,github::360-info/themes360info"
 		}
-	}
+	},
 
 	/* Use 'postCreateCommand' to run commands after the container is created
 	  (for example, copy some extra fonts to /usr/local/share/fonts) */
@@ -40,7 +40,12 @@
 	// "forwardPorts": [],
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+	  "vscode": {
+	    // quarto extension already included with feature
+	    "extensions": ["mechatroner.rainbow-csv"]	  
+	  }	
+	},
 
 	// Uncomment to connect as root instead.
 	// More info: https://aka.ms/dev-containers-non-root.
